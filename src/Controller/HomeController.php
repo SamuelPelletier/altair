@@ -43,6 +43,9 @@ class HomeController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        return $this->render('home/index.html.twig',);
+        $test = "Bob";
+        $video_url = "https://samuelpelletier.fr/MyFavorite4Chan/video/drive_style.webm";
+
+        return $this->render('home/index.html.twig', ["test" => $test, "video" => $video_url]);
     }
 }
