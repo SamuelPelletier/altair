@@ -6,10 +6,11 @@
     <h1>Home</h1>
     <h2>{{ test }}</h2>
 
-    <video controls width="750" height="500">
-        <source src= {{video}} >
-    </video>
-
+    {% for video in videos %}
+        <video controls width="750" height="500">
+            <source src="{{video['video']}}">
+        </video>
+    {% endfor %}
 
 
 
