@@ -43,12 +43,15 @@ class HomeController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $test = $this->bob();
-        return $this->render('home/index.html.twig', ['magie' => $test]);
-    }
 
-    function bob()
-    {
-        return true;
+        $test = "Bob";
+        $video_url = array(
+            array('video' => "https://samuelpelletier.fr/MyFavorite4Chan/video/drive_style.webm"),
+            array('video' => "https://samuelpelletier.fr/MyFavorite4Chan/video/grow_up.webm "),
+            array('video' => "https://samuelpelletier.fr/MyFavorite4Chan/video/wooden_dance.webm"),
+            array('video' => "https://samuelpelletier.fr/MyFavorite4Chan/video/nice_shot.webm")
+        );
+
+        return $this->render('home/index.html.twig', ["test" => $test, 'videos' => $video_url]);
     }
 }

@@ -4,5 +4,12 @@
 
 {% block body %}
     <h1>Home</h1>
-    <h2>{{ magie }}</h2>
+    <h2>{{ test }}</h2>
+
+    {% for video in videos %}
+        <video controls width="750" height="500">
+            <source src="{{ video['video'] }}">
+        </video>
+    {% endfor %}
 {% endblock %}
+
