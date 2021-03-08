@@ -43,6 +43,12 @@ class HomeController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        return $this->render('home/index.html.twig',);
+        $test = $this->bob();
+        return $this->render('home/index.html.twig', ['magie' => $test]);
+    }
+
+    function bob()
+    {
+        return true;
     }
 }
