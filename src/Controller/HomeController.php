@@ -29,7 +29,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Controller used to manage home contents in the public part of the site.
  *
- * @Route("/home")
+ * @Route("/")
  *
  */
 class HomeController extends AbstractController
